@@ -5,7 +5,7 @@ prohibiciones = {'maldición', 'insulto', 'grosería', 'ofensa'}
 
 # Solicitar al usuario que introduzca una opinión
 opinion = input('Introduce tu opinión: ')
-palabras_opinion = opinion.lower().split()
+palabras_opinion = opinion.lower().split() # split proporciona una lista
 
 # Comprobar si la palabra está en el conjunto de palabras prohibidas
 palabras_prohibidas_utilizadas = prohibiciones.intersection(palabras_opinion)
