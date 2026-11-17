@@ -3,7 +3,6 @@
    Incluye funciones para cálculos con números enteros.
    ...blablablabla.
 """
-
 class Calculadora: # Es una entidad (clase)
     pass
 
