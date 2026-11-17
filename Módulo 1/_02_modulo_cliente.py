@@ -1,0 +1,3 @@
+import _01_modulo_proveedor
+
+print(_01_modulo_proveedor.numero_usos)
