@@ -11,3 +11,7 @@ Verificar que el valor del año es igual o inferior al año actual --> YearError
 Nota: YearError no existe. Hay que crear la clase y buscar la clase del árbol
 de excepciones que mejor encaje.
 """
+from datetime import datetime
+
+anyo_actual = datetime.now().year
+print(anyo_actual)
