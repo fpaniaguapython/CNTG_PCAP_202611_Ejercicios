@@ -1,9 +1,22 @@
 def guardar_ficha(nombre: str, salario: int, retencion: float):
-    '''
+    """
     Comprobar que los tipos son correctos.
     Comprobar que el nombre no está vacio: len(nombre.strip())>0
     Comprobar que el salario es positivo: salario>0
-    '''
+    """
+    # Comprobar que los tipos son correctos.
+    if (not isinstance(nombre, str)
+        or not isinstance(salario, int) 
+        or not isinstance(retencion, float)):
+        raise TypeError('Los tipos de los argumentos son incorrectos')
+
+    # Comprobar que el nombre no está vacio: len(nombre.strip())>0
+    if (len(nombre.strip())==0):
+        raise ValueError('No se admiten nombres vacíos')
+
+    # Comprobar que el salario es positivo: salario>0
+    if salario<=0:
+        raise ValueError('El salario debe ser positivo')
 
     # nombre.lower() --> Obtiene una versión en minúsculas del nombre
     # mode='wt' --> w(write), t(text)
@@ -15,4 +28,7 @@ def guardar_ficha(nombre: str, salario: int, retencion: float):
     fichero.write(str(retencion)) # La función str convierte a str el argumento 
     fichero.close()
 
-guardar_ficha('Fernando', 15000, 15.3)
+try:
+    guardar_ficha("Python", 2000, 15.0)
+except Exception as ex:
+    print(ex)
