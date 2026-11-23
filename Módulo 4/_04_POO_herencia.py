@@ -1,13 +1,10 @@
-from typing import Any
-
-
 class Animal:
     def __init__(self, especie, nombre, fecha_nacimiento, posicion):
         self.especie = especie
         self.nombre = nombre
         self.fecha_nacimiento = fecha_nacimiento
         self.posicion = posicion
-    
+
     def comer(self):
         print(f'Soy {self.nombre } y estoy comiendo como animal')
 
