@@ -1,14 +1,9 @@
 import sys
-try:
-    fichero_errores = open("salida_errores.txt", "w")
-    fichero_salida_normal = open("salida_normal.txt", "w")
 
+with open("salida_errores.txt", mode="w") as fichero_errores:
     sys.stderr = fichero_errores
+    print("Ejecución con error", file=sys.stderr)
+    
+with open("salida_normal.txt", "w") as fichero_salida_normal:
     sys.stdout = fichero_salida_normal
-
-    # print("Esto es un error", file=sys.stderr) # Escritura en la salida de error
-    print('Esto es correcto')
-    raise Exception('Esto es un error')
-finally:
-    fichero_errores.close()
-    fichero_salida_normal.close()
+    print("Ejecución correcta")
