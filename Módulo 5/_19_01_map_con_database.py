@@ -15,7 +15,7 @@ def obtener_info_pelicula(pelicula):
 # 1. Conectar con la base de datos (se crea si no existe)
 conexion = sqlite3.connect("peliculas.sqlite")
 conexion.row_factory = sqlite3.Row # Permite acceder a las columnas por su nombre, no solo por su índice
-conexion.execute("PRAGMA journal_mode=WAL")
+conexion.execute("PRAGMA journal_mode=WAL") # Permite desbloquear para lectura la base de datos
 
 
 # 2. Crear un cursor
