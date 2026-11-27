@@ -1,1 +1,1 @@
-Ejecución correcta
+Este texto se redirige al fichero 'salida_normal.txt'
